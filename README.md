@@ -25,3 +25,40 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Criando o projeto
+
+`ng new memoteca`
+
+## Criando componente rodape na pasta componentes
+
+`ng g c componentes/rodape`
+
+## Property Binding
+
+Essa funcionalida permite que os dados no arquivo javascript sejam refletidos no html, porém não do html para o javascript.
+
+```
+  pensamento = {
+    id: '1',
+    conteudo: 'Aprendendo Angular',
+    autoria: 'Dev',
+    modelo: ''
+  }
+```
+
+````
+<input>
+    //trecho de código omitido
+    [value]="pensamento.conteudo"
+</input>
+
+<input>
+    //trecho de código omitido
+    [value]="pensamento.autoria"
+</input>
+````
+
+````
+<p class="autoria"><b>{{ pensamento.autoria }}</b></p>
+````
