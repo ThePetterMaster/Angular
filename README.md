@@ -62,3 +62,31 @@ Essa funcionalida permite que os dados no arquivo javascript sejam refletidos no
 ````
 <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
 ````
+
+## Event Binding
+
+É uma técnica que permite que você escute e responda a ações do usuário, como cliques, movimentos do mouse, teclas pressionadas, entre outros.
+
+````
+<div class="acoes">
+  <button (click)="criarPensamento()" class="botao">Salvar</button>
+  <button (click)="cancelar()" class="botao">Cancelar</button>
+</div>
+````
+
+````
+criarPensamento() {
+  alert("Novo pensamento criado!")
+}
+````
+
+## Event Binding
+
+Essa funcionalida permite que os dados no arquivo javascript sejam refletidos no html e do html para o javascript.
+
+````
+<input
+  //Trecho de código omitido
+  [(ngModel)]="pensamento.modelo"
+>
+````
