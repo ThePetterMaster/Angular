@@ -133,3 +133,6 @@ Mostra esse componente caso listaPensamentos for menor ou igual a zero
 ````
 
 ### ngClass
+````
+<div class="pensamento {{ pensamento.modelo }} ff-roboto-mono" [ngClass]="larguraPensamento()">
+````
