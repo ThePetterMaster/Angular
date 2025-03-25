@@ -90,3 +90,46 @@ Essa funcionalida permite que os dados no arquivo javascript sejam refletidos no
   [(ngModel)]="pensamento.modelo"
 >
 ````
+
+## Diretivas
+Diretivas no Angular são instruções que você pode aplicar aos elementos do DOM para modificar seu comportamento ou aparência12. Elas são categorizadas em três tipos principais:
+
+Diretivas de Atributo: Alteram a aparência ou comportamento dos elementos do DOM. Exemplos incluem NgClass e NgStyle12.
+Diretivas Estruturais: Modificam a estrutura do DOM, adicionando ou removendo elementos. Exemplos incluem NgIf, NgFor e NgSwitch12.
+Componentes: São diretivas com templates, que definem como o conteúdo será exibido12.
+
+### ngFor
+````
+    <div class="mural">
+        <div *ngFor="let pensamento of listaPensamentos">
+            <app-pensamento></app-pensamento>
+        </div>
+    </div>
+````
+
+````
+listaPensamentos = [];
+````
+### ngIf
+
+````
+<p *ngIf="isVisible">Este parágrafo só aparece se isVisible for verdadeiro.</p>
+````
+
+### Componentes
+
+````
+    <div class="mural" *ngIf="listaPensamentos.length > 0, else semPensamentos">
+        <div *ngFor="let pensamento of listaPensamentos">
+        <app-pensamento [pensamento]="pensamento"></app-pensamento>
+        </div>
+    </div>
+````
+Mostra esse componente caso listaPensamentos for menor ou igual a zero
+````
+<ng-template #semPensamentos>
+//Algum código
+</ng-template>
+````
+
+### ngClass
