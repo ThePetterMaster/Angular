@@ -138,4 +138,20 @@ Mostra esse componente caso listaPensamentos for menor ou igual a zero
 <div class="pensamento {{ pensamento.modelo }} ff-roboto-mono" [ngClass]="larguraPensamento()">
 ````
 
+## Comunicação entre componentes
+
+Filho
+````
+    @Input() pensamento = {
+````
+Pai
+````
+    <div class="mural">
+        <div *ngFor="let pensamento of listaPensamentos">
+            <app-pensamento [pensamento]="pensamento"></app-pensamento>
+        </div>
+    </div>
+````
+
+
 ## Rotas
