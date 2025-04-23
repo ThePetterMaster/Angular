@@ -34,6 +34,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 `ng g c componentes/rodape`
 
+## Criando service
+
+`ng generate service pasta/arquivo`
+
 ## Property Binding
 
 Essa funcionalida permite que os dados no arquivo javascript sejam refletidos no html, porém não do html para o javascript.
