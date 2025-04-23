@@ -139,10 +139,10 @@ Mostra esse componente caso listaPensamentos for menor ou igual a zero
 ````
 
 ## Comunicação entre componentes
-
+### De pai para filho
 Filho
 ````
-    @Input() pensamento = {
+    @Input() pensamento = {}
 ````
 Pai
 ````
@@ -152,6 +152,6 @@ Pai
         </div>
     </div>
 ````
-
+### De filho para pai
 
 ## Rotas
