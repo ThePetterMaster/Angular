@@ -153,5 +153,12 @@ Pai
     </div>
 ````
 ### De filho para pai
+Filho
+````
+@Output() evento = new EventEmitter();
+````
 
-## Rotas
+Pai
+````
+(evento)="evento()"
+````
